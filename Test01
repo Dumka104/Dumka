@@ -1,0 +1,23 @@
+заход в гит => копир ssh => термин => git clone => yes => ssh-keygen -t rsa => cat ~/.ssh/id_rsa.pub. => копир ключ, встав в гит и заход в VSC.
+включаем WSL, LF.
+комит = git status => git add. => git commit -m "initial commit" => запушить(git push)
+npm i для установки(в vsc)
+------------------------------------------------------------------------------
+до начала экза нужно всё распределить =
+import _ from 'lodash';
+const showInfo = (content) => {
+    const data = content.splice('\n').slice(2).map((row) => row.split('|').slice(1).slice(0, -1).map((el) => el.trim()));
+-------------------------------------
+//test 1
+    console.log(`Const: ${data.length}`);
+//test 2
+    const galaxies = _.uniq(data.map((el) => el[1])).sort();
+    console.log(`galaxies: ${galaxies.join(', ')}`); 
+//test 3
+    const minDis = _.min(data.map((el) => Number(el[4])));
+    const maxDis = _.max(data.map((el) => Number(el[4])));
+    console.log(.........);
+};
+
+export default showInfo;
+----------------------------------------------
